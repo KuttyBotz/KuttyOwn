@@ -146,3 +146,38 @@ async def leech_vidtools(client: Client, message: Message):
 
 bot.add_handler(MessageHandler(mirror_vidtools, filters=command(BotCommands.MVidCommand) & CustomFilters.authorized))
 bot.add_handler(MessageHandler(leech_vidtools, filters=command(BotCommands.LVidCommand) & CustomFilters.authorized))
+
+# ✅ Add this new function at the bottom
+from pyrogram.types import CallbackQuery
+from bot.helper.video_utils.selector import SelectMode, cb_vidtools
+
+async def handle_video_tool(query: CallbackQuery, action: str):
+    """
+    Bridge between User Settings submenu and cb_vidtools SelectMode flow.
+    """
+    msg = query.message
+
+    action_map = {
+        "vid_convert": "convert",
+        "vid_trim": "trim",
+        "vid_mergeaud": "mergeaud",
+        "vid_subs": "subfile",
+        "vid_compress": "compress",
+        "vid_watermark": "watermark",
+        "vid_subsync": "subsync",
+        "vid_rmstream": "rmstream",
+    }
+
+    if action not in action_map:
+        await msg.reply_text("❌ Unknown Video Tool action!")
+        return
+
+    # Create SelectMode object
+    obj = SelectMode(query.from_user.id, msg)
+    obj.mode = action_map[action]
+
+    # Force correct callback format for cb_vidtools
+    fake_query = query
+    fake_query.data = f"vidtool {action_map[action]}"
+
+    await cb_vidtools(None, fake_query, obj)
