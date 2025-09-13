@@ -6,7 +6,7 @@ from pyrogram.filters import regex, user
 from pyrogram.handlers import CallbackQueryHandler
 from pyrogram.types import CallbackQuery
 from time import time
-
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from bot import VID_MODE
 from bot.helper.ext_utils.bot_utils import new_thread
 from bot.helper.ext_utils.status_utils import get_readable_file_size, get_readable_time
