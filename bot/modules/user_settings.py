@@ -99,6 +99,8 @@ async def get_user_settings(from_user, data: str, uset_data: str):
 
         buttons.button_data('Zip Mode', f'userset {user_id} zipmode')
 
+        buttons.button_data("🎬 Video Tools", f'userset {user_id} vidtools')
+
         sesmsg, buttonkey = ('ENABLE ✅', '✅ Session String') if user_dict.get('session_string') else ('DISABLE', 'Session String')
         buttons.button_data(buttonkey, f'userset {user_id} setdata session_string')
 
@@ -256,6 +258,21 @@ async def get_user_settings(from_user, data: str, uset_data: str):
                 f'⁍ <b>Auto Mode:</b> Zip only file in folder/subfolder if size more than {part_size}\n\n'
                 f'<b>Current Mode:</b> {def_data}\n\n'
                 '<i>*Seed torrent only working in <b>Deafult Mode</b></i>')
+
+    elif data == 'vidtools':
+        buttons.button_data("🎥 Convert", f'userset {user_id} vid_convert')
+        buttons.button_data("✂️ Trim", f'userset {user_id} vid_trim')
+        buttons.button_data("🎙️ Merge Audio", f'userset {user_id} vid_mergeaud')
+        buttons.button_data("📝 Subtitles", f'userset {user_id} vid_subs')
+        buttons.button_data("📦 Compress", f'userset {user_id} vid_compress')
+        buttons.button_data("💧 Watermark", f'userset {user_id} vid_watermark')
+        buttons.button_data("⏳ Sync Subs", f'userset {user_id} vid_subsync')
+        buttons.button_data("❌ Remove Stream", f'userset {user_id} vid_rmstream')
+        buttons.button_data("⬅️ Back", f'userset {user_id} back')
+
+        image = config_dict.get('IMAGE_VIDEO')  # optional image
+        text = "<b>🎬 VIDEO TOOLS</b>\n\nSelect a tool to continue."
+
 
     elif data == 'setdata':
         if uset_data in {'thumb', 'rclone_config', 'token_pickle'}:
@@ -484,12 +501,20 @@ async def edit_user_settings(client: Client, query: CallbackQuery):
                 return
             await gather(query.answer(), update_user_ldata(user_id, 'zipmode', zmode))
             await update_user_settings(query, 'zipmode', zmode)
+            
         case 'capmono' | 'capitalic' | 'capbold' | 'capnormal' as value:
             await update_user_ldata(user_id, 'caption_style', value.lstrip('cap'))
             await gather(query.answer(), update_user_settings(query, 'capmode'))
+
+        case 'vid_convert' | 'vid_trim' | 'vid_mergeaud' | 'vid_subs' | 'vid_compress' | 'vid_watermark' | 'vid_subsync' | 'vid_rmstream':
+            await query.answer()
+            from bot.modules.video_tools import handle_video_tool
+            await handle_video_tool(query, data[2])
+
         case 'close':
             handler_dict[user_id] = False
             await gather(query.answer(), deleteMessage(message, message.reply_to_message))
+
         case 'rem_thumb' | 'rem_rclone_config' | 'rem_token_pickle' as value:
             match value:
                 case 'rem_thumb':
