@@ -99,7 +99,7 @@ async def get_user_settings(from_user, data: str, uset_data: str):
 
         buttons.button_data('Zip Mode', f'userset {user_id} zipmode')
 
-        buttons.button_data("🎬 Video Tools", f'userset {user_id} vidtools')
+        buttons.button_data("Video Tools", f'userset {user_id} vidtools')
 
         sesmsg, buttonkey = ('ENABLE ✅', '✅ Session String') if user_dict.get('session_string') else ('DISABLE', 'Session String')
         buttons.button_data(buttonkey, f'userset {user_id} setdata session_string')
