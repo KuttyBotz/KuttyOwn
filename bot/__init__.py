@@ -454,12 +454,12 @@ UPDATE_EVERYTHING = environ.get('UPDATE_EVERYTHING', 'False').lower() == 'true'
 
 
 # ============================== UI ====================================
-AUTHOR_NAME = environ.get('AUTHOR_NAME', 'Shark Toons India')
-AUTHOR_URL = environ.get('AUTHOR_URL', 'https://t.me/SharkToonsIndia')
+AUTHOR_NAME = environ.get('AUTHOR_NAME', 'HEARTTHIEFT')
+AUTHOR_URL = environ.get('AUTHOR_URL', 'https://t.me/HeartThieft')
 DRIVE_SEARCH_TITLE = environ.get('DRIVE_SEARCH_TITLE', 'Drive Search')
-GD_INFO = environ.get('GD_INFO', 'By @SharkToonsIndia')
-# PROG_FINISH = environ.get('PROG_FINISH', '⬤')
-# PROG_UNFINISH = environ.get('PROG_UNFINISH', '○')
+GD_INFO = environ.get('GD_INFO', 'By @HEARTTHIEFT')
+PROG_FINISH = environ.get('PROG_FINISH', '⬢')
+PROG_UNFINISH = environ.get('PROG_UNFINISH', '⬡')
 SOURCE_LINK_TITLE = environ.get('SOURCE_LINK_TITLE', 'Source Link')
 TIME_ZONE = environ.get('TIME_ZONE', 'Asia/Kolkata')
 TIME_ZONE_TITLE = environ.get('TIME_ZONE_TITLE', 'GMT+05:30')
