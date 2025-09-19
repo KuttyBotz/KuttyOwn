@@ -33,11 +33,11 @@ default_values = {'AUTO_DELETE_MESSAGE_DURATION': 30,
                   'CLOUD_LINK_FILTERS': '',
                   'UPSTREAM_BRANCH': 'main',
                   'FSUB_BUTTON_NAME': 'Join Group',
-                  'CHANNEL_USERNAME': 'KuttyBots',
-                  'AUTHOR_NAME': 'Kutty Mirror Leech',
-                  'AUTHOR_URL': 'https://t.me/KuttyBots',
+                  'CHANNEL_USERNAME': 'HEARTXBOTS',
+                  'AUTHOR_NAME': 'HEARTTHIEFT',
+                  'AUTHOR_URL': 'https://t.me/Heartxbots',
                   'DRIVE_SEARCH_TITLE': 'Drive Search',
-                  'GD_INFO': 'By @KuttyTG',
+                  'GD_INFO': 'By @HEARTTHIEFT',
                   'RCLONE_TFSIMULATION': 4,
                   'SESSION_TIMEOUT': 0,
                   'PROG_FINISH': '⬢',
@@ -49,7 +49,7 @@ default_values = {'AUTO_DELETE_MESSAGE_DURATION': 30,
                   'DAILY_LIMIT_SIZE': 50,
                   'TSEARCH_TITLE': 'Torrent Search',
                   'DISABLE_VIDTOOLS': 'Nope',
-                  'COMPRESS_BANNER': 'Re-Encoded by @KuttyTG',
+                  'COMPRESS_BANNER': 'Re-Encoded By @HEARTTHIEFT',
                   'LIB264_PRESET': 'superfast',
                   'LIB265_PRESET': 'faster',
                   'HARDSUB_FONT_NAME': 'Simple Day Mistu',
@@ -195,7 +195,7 @@ async def load_config():
     INDEX_URL = environ.get('INDEX_URL', '').rstrip('/')
     USE_SERVICE_ACCOUNTS = environ.get('USE_SERVICE_ACCOUNTS', 'False').lower() == 'true'
     CMD_SUFFIX = environ.get('CMD_SUFFIX', '')
-    AUTO_THUMBNAIL = environ.get('AUTO_THUMBNAIL', 'False').lower() == 'true'
+    AUTO_THUMBNAIL = environ.get('AUTO_THUMBNAIL', 'True').lower() == 'true'
     PREMIUM_MODE = environ.get('PREMIUM_MODE', 'False').lower() == 'true'
     SESSION_TIMEOUT = int(environ.get('SESSION_TIMEOUT', 0))
     DAILY_MODE = environ.get('DAILY_MODE', 'False').lower() == 'true'
@@ -317,9 +317,9 @@ async def load_config():
     FUSERNAME = environ.get('FUSERNAME', 'False').lower() == 'true'
     # Subscribe
     FSUB = environ.get('FSUB', 'False').lower() == 'true'
-    FSUB_CHANNEL_ID = int(environ.get('FSUB_CHANNEL_ID', -1001768377379))
+    FSUB_CHANNEL_ID = int(environ.get('FSUB_CHANNEL_ID', -1002342022310))
     FSUB_BUTTON_NAME = environ.get('FSUB_BUTTON_NAME', 'Join Channel')
-    CHANNEL_USERNAME = environ.get('CHANNEL_USERNAME', 'TrollReleases')
+    CHANNEL_USERNAME = environ.get('CHANNEL_USERNAME', 'HEARTXBOTS')
     # ======================================================================
 
     # ============================ STICKERS ================================
@@ -407,10 +407,10 @@ async def load_config():
     # ======================================================================
 
     # ============================== UI ====================================
-    AUTHOR_NAME = environ.get('AUTHOR_NAME', 'Anonim')
-    AUTHOR_URL = environ.get('AUTHOR_URL', 'https://t.me/TrollUser')
+    AUTHOR_NAME = environ.get('AUTHOR_NAME', 'HEARTTHEIFT')
+    AUTHOR_URL = environ.get('AUTHOR_URL', 'https://t.me/Heartthieft')
     DRIVE_SEARCH_TITLE = environ.get('DRIVE_SEARCH_TITLE', 'Drive Search')
-    GD_INFO = environ.get('GD_INFO', 'Uploaded by MLTBRM Bot')
+    GD_INFO = environ.get('GD_INFO', 'Uploaded By HEARTXBOTS')
     PROG_FINISH = environ.get('PROG_FINISH', '⬢')
     PROG_UNFINISH = environ.get('PROG_UNFINISH', '⬡')
     SOURCE_LINK_TITLE = environ.get('SOURCE_LINK_TITLE', 'Source Link')
