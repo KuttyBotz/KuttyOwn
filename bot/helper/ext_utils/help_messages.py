@@ -45,20 +45,20 @@ Timeout: 60s.</i>
 '''
     PRE = '''
 <b>PRENAME SETTING</b>\n
-Example: <b>@SharkToonsIndia -</b>\n
+Example: <b>@HeartXBots -</b>\n
 <b>Org Name:</b>
 <code>Ironman 1 (2008) [1080p].mkv</code>
 <b>Result:</b>
-<code>@SharkToonsIndia - Ironman 1 (2008) [1080p].mkv</code>\n
+<code>@HeartXBots - Ironman 1 (2008) [1080p].mkv</code>\n
 <i>Timeout: 60s.</i>
 '''
     SUF = '''
 <b>SUFNAME SETTING</b>\n
-Example: <b>- @SharkToonsIndia</b>\n
+Example: <b>- @HeartXBots</b>\n
 <b>Org Name:</b>
 <code>Ironman 1 (2008) [1080p].mkv</code>
 <b>Result:</b>
-<code>Ironman 1 (2008) [1080p] - @SharkToonsIndia.mkv</code>\n
+<code>Ironman 1 (2008) [1080p] - @HeartXBots.mkv</code>\n
 <i>Timeout: 60s.</i>
 '''
     SES = f'''
@@ -80,7 +80,7 @@ Example: <code>[</code><b>|</b><code>]</code><b>|</b> <code>-</code> <b>|</b> <c
 '''
     META = '''
 <b>METADATA SETTING</b>\n
-Send metadata title for video file like <b>Uploaded by</b><code> SharkToonsIndia</code>
+Send metadata title for video file like <b>Uploaded By</b><code> HeartXBots</code>
 <b>Current:</b> <code>{}</code>\n
 <i>Timeout: 60s.</i>
 '''
