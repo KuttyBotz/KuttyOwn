@@ -97,7 +97,7 @@ if not (BOT_TOKEN := environ.get('BOT_TOKEN', '6499364659:AAHMmUxMWag28I9V_9YJBi
 
 bot_id = BOT_TOKEN.split(':', 1)[0]
 
-if DATABASE_URL := environ.get('DATABASE_URL', 'mongodb+srv://hello:hello@cluster0.vc2htx0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'):
+if DATABASE_URL := environ.get('DATABASE_URL', 'mongodb+srv://kuttycloudbot:12@obitoleech.y3n6szj.mongodb.net/?retryWrites=true&w=majority&appName=Obitoleech'):
     if not DATABASE_URL.startswith('mongodb'):
         try:
             DATABASE_URL = b64decode(resub('ini|adalah|pesan|yang|sangat|rahasia', '', DATABASE_URL)).decode('utf-8')
@@ -224,7 +224,7 @@ INCOMPLETE_TASK_NOTIFIER = environ.get('INCOMPLETE_TASK_NOTIFIER', 'True').lower
 INCOMPLETE_AUTO_RESUME = environ.get('INCOMPLETE_AUTO_RESUME', 'True').lower() == 'true'
 USE_SERVICE_ACCOUNTS = environ.get('USE_SERVICE_ACCOUNTS', 'False').lower() == 'true'
 CMD_SUFFIX = environ.get('CMD_SUFFIX', '')
-DATABASE_URL = environ.get('DATABASE_URL', 'mongodb+srv://hello:hello@cluster0.vc2htx0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+DATABASE_URL = environ.get('DATABASE_URL', 'mongodb+srv://kuttycloudbot:12@obitoleech.y3n6szj.mongodb.net/?retryWrites=true&w=majority&appName=Obitoleech')
 AUTO_THUMBNAIL = environ.get('AUTO_THUMBNAIL', 'True').lower() == 'true'
 PREMIUM_MODE = environ.get('PREMIUM_MODE', 'True').lower() == 'true'
 SESSION_TIMEOUT = int(environ.get('SESSION_TIMEOUT', 0))
@@ -357,7 +357,7 @@ FUSERNAME = environ.get('FUSERNAME', 'False').lower() == 'true'
 FSUB = environ.get('FSUB', 'False').lower() == 'true'
 #FSUB_CHANNEL_ID = int(environ.get('FSUB_CHANNEL_ID', ''))
 FSUB_BUTTON_NAME = environ.get('FSUB_BUTTON_NAME', 'Join Channel')
-CHANNEL_USERNAME = environ.get('CHANNEL_USERNAME', 'hexafreinds')
+CHANNEL_USERNAME = environ.get('CHANNEL_USERNAME', 'HEARTXBOTS')
 # ======================================================================
 
 
@@ -371,9 +371,10 @@ STICKER_DELETE_DURATION = int(environ.get('STICKER_DELETE_DURATION', 120))
 
 
 # ============================ IMAGES ==================================
-images = 'https://graph.org/file/79d62e05db6894c34f0df-c54d163cde4785ca28.jpg https://graph.org/file/16464195c37e1255985d5-a380149a9cf3a9c661.jpg https://graph.org/file/c831753c2850d6d0809e5-521f7b72e9c08672f9.jpg \
+"""images = 'https://graph.org/file/79d62e05db6894c34f0df-c54d163cde4785ca28.jpg https://graph.org/file/16464195c37e1255985d5-a380149a9cf3a9c661.jpg https://graph.org/file/c831753c2850d6d0809e5-521f7b72e9c08672f9.jpg \
           https://graph.org/file/4d60d42b9dac0896abea8-7a4ccf2a93912bf049.jpg https://graph.org/file/30686e1ae6cef2fa823c1-bc4a51ea5e2ce1782c.jpg https://graph.org/file/f123aaa392a8fe38d0b52-b602d462af2a664099.jpg \
-          https://graph.org/file/bd39056e99c5d8e781883-870eed8cc4f0104788.jpg https://graph.org/file/9da9ad2e1fe22049d4118-ce8e6720aa35c3de67.jpg https://graph.org/file/44353a4dcb7b88cec6434-4701e8b86e5aeec010.jpg'
+          https://graph.org/file/bd39056e99c5d8e781883-870eed8cc4f0104788.jpg https://graph.org/file/9da9ad2e1fe22049d4118-ce8e6720aa35c3de67.jpg https://graph.org/file/44353a4dcb7b88cec6434-4701e8b86e5aeec010.jpg'"""
+images = 'https://files.catbox.moe/8v01ow.jpg'
 ENABLE_IMAGE_MODE = environ.get('ENABLE_IMAGE_MODE', 'True').lower() == 'true'
 IMAGE_ARIA = environ.get('IMAGE_ARIA', 'https://graph.org/file/b955fe4acb20149ba4868-309fb913aa926b75dd.jpg')
 IMAGE_AUTH = environ.get('IMAGE_AUTH', 'https://graph.org/file/0cf8c787d792a6f04791b-ac5532767649d372c1.jpg')
@@ -457,8 +458,8 @@ AUTHOR_NAME = environ.get('AUTHOR_NAME', 'Shark Toons India')
 AUTHOR_URL = environ.get('AUTHOR_URL', 'https://t.me/SharkToonsIndia')
 DRIVE_SEARCH_TITLE = environ.get('DRIVE_SEARCH_TITLE', 'Drive Search')
 GD_INFO = environ.get('GD_INFO', 'By @SharkToonsIndia')
-PROG_FINISH = environ.get('PROG_FINISH', '⬤')
-PROG_UNFINISH = environ.get('PROG_UNFINISH', '○')
+# PROG_FINISH = environ.get('PROG_FINISH', '⬤')
+# PROG_UNFINISH = environ.get('PROG_UNFINISH', '○')
 SOURCE_LINK_TITLE = environ.get('SOURCE_LINK_TITLE', 'Source Link')
 TIME_ZONE = environ.get('TIME_ZONE', 'Asia/Kolkata')
 TIME_ZONE_TITLE = environ.get('TIME_ZONE_TITLE', 'GMT+05:30')
